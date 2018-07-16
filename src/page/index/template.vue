@@ -1,9 +1,9 @@
 <template>
   <section>
+    <navmenu_float></navmenu_float>
     <p>{{greeting}}</p>
     <Test/>
     <div class="box">{{test}}</div>
-      <el-button type="primary" icon="el-icon-search">搜索</el-button>
   </section>
 
 
@@ -11,9 +11,11 @@
 <script>
 import Test from "@component/test";
 import { getFetchTest } from "@model/index";
+import navmenu_float from "@component/navbar/navmenu_float.vue";
+
 export default {
   components:{
-    Test,
+    Test,navmenu_float,
   },
   created(){
     this.getInitialFetch();
